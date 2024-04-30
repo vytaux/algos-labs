@@ -9,19 +9,18 @@ public class Main {
         warmup();
 
         for (int n = 1000; n <= 10000; n += 1000) {
-            int[] randomNumbers1 = RandomNumbersGenerator.generate(n);
+            int[] randomNumbers = RandomNumbersGenerator.generate(n);
+            
             Timer.start();
-            Algorithm1.removeDups(randomNumbers1, n);
+            Algorithm1.removeDups(randomNumbers, n);
             Results.put(n, Timer.stop());
 
-            int[] randomNumbers2 = RandomNumbersGenerator.generate(n);
             Timer.start();
-            Algorithm2.removeDups(randomNumbers2, n);
+            Algorithm2.removeDups(randomNumbers, n);
             Results.put(n, Timer.stop());
 
-            int[] randomNumbers3 = RandomNumbersGenerator.generate(n);
             Timer.start();
-            Algorithm3.removeDups(randomNumbers3, n);
+            Algorithm3.removeDups(randomNumbers, n);
             Results.put(n, Timer.stop());
         }
 
@@ -30,14 +29,11 @@ public class Main {
 
     private static void warmup() {
         for (int n = 10000; n <= 100000; n += 10000) {
-            int[] randomNumbers1 = RandomNumbersGenerator.generate(n);
-            Algorithm1.removeDups(randomNumbers1, n);
+            int[] randomNumbers = RandomNumbersGenerator.generate(n);
 
-            int[] randomNumbers2 = RandomNumbersGenerator.generate(n);
-            Algorithm2.removeDups(randomNumbers2, n);
-
-            int[] randomNumbers3 = RandomNumbersGenerator.generate(n);
-            Algorithm3.removeDups(randomNumbers3, n);
+            Algorithm1.removeDups(randomNumbers, n);
+            Algorithm2.removeDups(randomNumbers, n);
+            Algorithm3.removeDups(randomNumbers, n);
         }
     }
 }
