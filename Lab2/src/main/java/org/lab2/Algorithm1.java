@@ -2,33 +2,33 @@ package org.lab2;
 
 public class Algorithm1 {
     public static int thirdLargest(int[] A) {
-        int firstMax = 0;
+        int firstMaxIndex = 0;
 
-        // First loop to find the maximum element
-        for (int num : A) {
-            if (num > firstMax) {
-                firstMax = num;
+        // Find the maximum element
+        for (int i = 0; i < A.length; i++) {
+            if (A[i] > A[firstMaxIndex]) {
+                firstMaxIndex = i;
             }
         }
 
-        int secondMax = 0;
+        int secondMaxIndex = 0;
 
-        // Second loop to find the second maximum element
-        for (int num : A) {
-            if (num != firstMax && num > secondMax) {
-                secondMax = num;
+        // Find the second maximum element
+        for (int j = 0; j < A.length; j++) {
+            if (j != firstMaxIndex && A[j] > A[secondMaxIndex]) {
+                secondMaxIndex = j;
             }
         }
 
-        int thirdMax = 0;
+        int thirdMaxIndex = 0;
 
-        // Third loop to find the third maximum element
-        for (int num : A) {
-            if (num != firstMax && num != secondMax && num > thirdMax) {
-                thirdMax = num;
+        // Find the third maximum element
+        for (int k = 0; k < A.length; k++) {
+            if (k != firstMaxIndex && k != secondMaxIndex && A[k] > thirdMaxIndex) {
+                thirdMaxIndex = k;
             }
         }
 
-        return thirdMax;
+        return A[thirdMaxIndex];
     }
 }
