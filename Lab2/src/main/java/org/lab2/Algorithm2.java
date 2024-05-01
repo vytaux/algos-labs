@@ -2,15 +2,11 @@ package org.lab2;
 
 public class Algorithm2 {
     public static int thirdLargest(int[] A) {
-        if (arr.length < 3) {
-            return null;
-        }
-
         int max = Integer.MIN_VALUE;
         int preMax = Integer.MIN_VALUE;
         int prePreMax = Integer.MIN_VALUE;
 
-        for (int num : arr) {
+        for (int num : A) {
             if (num > max) {
                 prePreMax = preMax;
                 preMax = max;
