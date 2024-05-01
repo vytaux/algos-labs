@@ -1,11 +1,11 @@
 package org.lab2;
 
 public class Algorithm1 {
-    public static int thirdLargest(int[] arr) {
+    public static int thirdLargest(int[] A) {
         int firstMax = Integer.MIN_VALUE;
 
         // First loop to find the maximum element
-        for (int num : arr) {
+        for (int num : A) {
             if (num > firstMax) {
                 firstMax = num;
             }
@@ -14,7 +14,7 @@ public class Algorithm1 {
         int secondMax = Integer.MIN_VALUE;
 
         // Second loop to find the second maximum element
-        for (int num : arr) {
+        for (int num : A) {
             if (num != firstMax && num > secondMax) {
                 secondMax = num;
             }
@@ -23,7 +23,7 @@ public class Algorithm1 {
         int thirdMax = Integer.MIN_VALUE;
 
         // Third loop to find the third maximum element
-        for (int num : arr) {
+        for (int num : A) {
             if (num != firstMax && num != secondMax && num > thirdMax) {
                 thirdMax = num;
             }
