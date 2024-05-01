@@ -1,4 +1,4 @@
-package org.example;
+package org.lab1;
 
 public class Algorithm3 {
     public static int[] removeDups(int[] A, int n) {

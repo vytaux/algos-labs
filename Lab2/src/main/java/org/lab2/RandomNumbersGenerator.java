@@ -1,4 +1,4 @@
-package org.example;
+package org.lab2;
 
 public class RandomNumbersGenerator {
     

@@ -1,4 +1,4 @@
-package org.example;
+package org.lab1;
 
 import java.util.List;
 import java.util.Map;
