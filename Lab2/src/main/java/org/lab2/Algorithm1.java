@@ -2,7 +2,7 @@ package org.lab2;
 
 public class Algorithm1 {
     public static int thirdLargest(int[] A) {
-        int firstMax = Integer.MIN_VALUE;
+        int firstMax = 0;
 
         // First loop to find the maximum element
         for (int num : A) {
@@ -11,7 +11,7 @@ public class Algorithm1 {
             }
         }
 
-        int secondMax = Integer.MIN_VALUE;
+        int secondMax = 0;
 
         // Second loop to find the second maximum element
         for (int num : A) {
@@ -20,7 +20,7 @@ public class Algorithm1 {
             }
         }
 
-        int thirdMax = Integer.MIN_VALUE;
+        int thirdMax = 0;
 
         // Third loop to find the third maximum element
         for (int num : A) {
