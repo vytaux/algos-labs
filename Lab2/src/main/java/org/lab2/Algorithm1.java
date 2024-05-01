@@ -24,7 +24,7 @@ public class Algorithm1 {
 
         // Find the third maximum element
         for (int k = 0; k < A.length; k++) {
-            if (k != firstMaxIndex && k != secondMaxIndex && A[k] > thirdMaxIndex) {
+            if (k != firstMaxIndex && k != secondMaxIndex && A[k] > A[thirdMaxIndex]) {
                 thirdMaxIndex = k;
             }
         }
